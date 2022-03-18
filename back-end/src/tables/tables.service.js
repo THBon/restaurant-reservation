@@ -10,12 +10,13 @@ function create(table) {
 function readTable(tableId) {
     return knex('tables')
         .select('*')
-        .where({ table_id: tableId }).first();
+        .where({ table_id })
+        .first();
 }
 
 function list() {
     return knex('tables')
-        .returning('*')
+        .select('*')
         .orderBy('table_name');
 }
 
