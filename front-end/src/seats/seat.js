@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { updateTable, listTables } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
+import "./seat.css";
 
 export default function SeatTable() {
     const [tables, setTables] = useState([]);
@@ -45,12 +46,12 @@ export default function SeatTable() {
     ));
 
     return(
-        <div>
+        <div className="seat-reservation">
             <div className="header">
                 <h1>Seat Reservation</h1>
             </div>
             <ErrorAlert error={tableError}/>
-            <div>
+            <div className="select-container">
                 <form onSubmit={submitHandler}>
                     <fieldset>
                         <legend>Select a table to seat this reservation</legend>

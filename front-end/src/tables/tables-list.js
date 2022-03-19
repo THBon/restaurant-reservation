@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ErrorAlert from "../layout/ErrorAlert";
 import { clearTable } from "../utils/api";
-
+import "./tables-list.css";
 export default function TablesView({ tables, loadDashboard }) {
     const [finishError, setFinishError] = useState(null);
 
@@ -39,7 +39,7 @@ export default function TablesView({ tables, loadDashboard }) {
                     {(table.reservation_id && (
                         <button
                             type="button"
-                            className="btn"
+                            className="finish-button btn"
                             data-table-id-finish={`${table.table_id}`}
                             onClick={() => finishHandler(table.table_id, table.reservation_id)}
                         >Finish</button>

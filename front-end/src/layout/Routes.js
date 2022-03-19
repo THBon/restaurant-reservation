@@ -8,6 +8,7 @@ import NewReservation from "../reservation/reservation-new";
 import useQuery from "../utils/useQuery";
 import NewTable from "../tables/table-new";
 import SeatTable from "../seats/seat";
+import Search from "../search/search";
 /**
  * Defines all the routes for the application.
  *
@@ -39,6 +40,9 @@ function Routes() {
       </Route>
       <Route path="/dashboard">
         <Dashboard date={query.get('date') || today()} />
+      </Route>
+      <Route path="/search">
+        <Search />
       </Route>
       <Route>
         <NotFound />

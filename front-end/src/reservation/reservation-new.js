@@ -2,19 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { createReservation, readReservation, updateReservation } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
-
+import "./reservation-new.css";
 
 //Creating a new reservation
 export default function NewReservation() {
-    let [reservationError, setReservationError] = useState(null)
-    let [reservation, setReservation] = useState({
+    const { reservation_id } = useParams();
+    const [reservationError, setReservationError] = useState(null)
+    const [reservation, setReservation] = useState({
+        reservation_id,
         first_name: "",
         last_name: "",
         mobile_number: "",
         reservation_date: "",
         reservation_time: "",
         people: "",
-        status: "Booked",
+        status: "booked",
     });
 
     const history = useHistory();
@@ -25,6 +27,8 @@ export default function NewReservation() {
 
     //Format time WIP
     const mainTime = Math.floor(date.getTimezoneOffset());
+
+
 
 
     useEffect(() => {
@@ -59,12 +63,6 @@ export default function NewReservation() {
         }));
     }
 
-    //When cancel button is pressed 
-    function cancelHandler(event) {
-        event.preventDefault();
-        history.goBack();
-    }
-
     //When submit button is pressed
     async function submitHandler(event) {
         event.preventDefault();
@@ -80,13 +78,20 @@ export default function NewReservation() {
             setReservationError(error);
         }
     }
+
+    //When cancel button is pressed 
+    function cancelHandler(event) {
+        event.preventDefault();
+        history.goBack();
+    }
+
     //Left off here, resume here with defining API
     return (
-        <div>
+        <div className="new-reservation">
             <div className="header">
                 <h1>New Reservation</h1>
             </div>
-            <form onSubmit={submitHandler}>
+            <form className="reservation-form mt-3" onSubmit={submitHandler}>
                 <ErrorAlert error={reservationError} />
                 <fieldset>
                     <legend>Customer Information:</legend>
@@ -162,8 +167,8 @@ export default function NewReservation() {
                 </fieldset>
                 <br/>
                 <div className="buttons">
-                    <button className="btn" onClick={(event) => cancelHandler(event)}>Cancel</button>
                     <button type="submit" className="btn">Submit</button>
+                    <button className="btn" onClick={(event) => cancelHandler(event)}>Cancel</button>
                 </div>
             </form>
         </div>

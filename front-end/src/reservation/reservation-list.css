@@ -1,0 +1,58 @@
+.reservations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  .card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #1597e2;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 20%);
+  }
+  
+  .list-group-item {
+    padding: 0.5em 1em;
+  }
+  
+  .list-group-item .btn {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 0.25em;
+    padding: 0.5em 1em;
+    font-size: 0.875rem;
+  }
+  
+  .list-group-item .btn:hover {
+    background-color: #08b2e3;
+    color: white;
+  }
+  
+  .card-footer {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .no-buttons {
+    height: 28px;
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .reservations-list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .list-group-item .btn {
+      font-size: 0.875rem;
+      padding: 0.25em 1em;
+    }
+  }
+  

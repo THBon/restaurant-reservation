@@ -87,7 +87,7 @@ export async function updateReservation(reservation, mainTime, signal) {
     headers,
     body: JSON.stringify({ data: reservation, date: { mainTime }}),
     signal,
-  }
+  };
   return await fetchJson(url, options, reservation);
 }
 

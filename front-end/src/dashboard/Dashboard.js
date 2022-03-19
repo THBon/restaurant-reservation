@@ -34,40 +34,6 @@ function Dashboard({ date }) {
     return () => abortController.abort();
   }
 
-  //Load reservation
-
-  /*useEffect(() => {
-    const abortController = new AbortController();
-    async function loadReservation() {
-      setReservationsError(null);
-      try {
-        const data = await listReservations({ date }, abortController.singal);
-        setReservations(data);
-      } catch (error) {
-        setReservationsError(error);
-      }
-    }
-    loadReservation();
-    return() => abortController.abort();
-  }, [date]);
-
-  //Load tables
-  useEffect(() => {
-    const abortController = new AbortController();
-
-    async function loadTables() {
-      setReservationsError(null);
-      try {
-        const data = await listTables(abortController.singal);
-        setTables(data);
-      } catch (error) {
-        setTablesError(error);
-      }
-    }
-    loadTables();
-    return () => abortController.abort();
-  }, []);*/
-
   //Change date buttons
 
   const previousDateHandler = () => {
@@ -88,9 +54,9 @@ function Dashboard({ date }) {
         <h1>Dash Board</h1>
         <h3>Reservations for date: {date}</h3>
         <div className="dashboard-button">
-          <button className="btn" onClick={() => previousDateHandler(date)}>Previous</button>
-          <button className="btn" onClick={() => nextDateHandler(date)}>Next</button>
-          <button className="btn" onClick={() => todayHandler()}>Today</button>  
+          <button className="btn mr-2" onClick={() => previousDateHandler(date)}>Previous</button>
+          <button className="btn mr-2" onClick={() => todayHandler()}>Today</button>  
+          <button className="btn mr-2" onClick={() => nextDateHandler(date)}>Next</button>
         </div>  
       </div>
       <ErrorAlert error={reservationsError} text={"Reservations"} />

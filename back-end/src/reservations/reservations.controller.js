@@ -179,7 +179,7 @@ function hasValidTime(req, res, next) {
   next();
 }
 
-function hasPeople(req, res, next) {
+function hasValidPartySize(req, res, next) {
   const { people } = req.body.data;
   if (people < 1 || typeof people !== 'number') {
     next({
@@ -194,7 +194,7 @@ async function reservationExists(req, res, next) {
   const { reservation_Id } = req.params;
   const foundRes = await service.read(reservation_Id);
 
-  if(data) {
+  if(foundRes) {
     res.locals.res = foundRes;
     return next();
   }
@@ -202,6 +202,57 @@ async function reservationExists(req, res, next) {
     status: 404,
     message: `No reservation found for reservation ${reservation_Id}.`,
   });
+}
+
+function hasValidStatus(req, res, next) {
+  const { status } = req.body.data;
+  const validStatus = ['booked', 'seated', 'finished', 'cancelled'];
+  if (!validStatus.includes(status)) {
+    next({
+      status: 400,
+      message: `'${status}' is not a valid status.`
+    });
+  }
+  next();
+}
+
+function hasValidFinish(req, res, next) {
+  const { status } = res.locals.res;
+  if (status === 'finished') {
+    next({
+      status: 400,
+      message: `Reservation is finished and cannot be updated.`
+    });
+  }
+  next();
+}
+
+function validPhoneNumber(req, res, next) {
+  const { mobile_number } = req.query;
+  
+  if (mobile_number) {
+    const numberOnly = mobile_number.split('-').join('');
+    if (isNaN(numberOnly)) {
+      next({
+        status: 400,
+        message: `Please only enter number separated by "-" (123-456-7890)`,
+      });
+    }
+  }
+  next();
+}
+
+function isBooked(req, res, next) {
+  const { status } = req.body.data;
+  if (status) {
+    if (status !== 'booked') {
+      next({
+        status: 400,
+        message: `A new reservation cannot have the status '${status}`,
+      })
+    }
+  }
+  next();
 }
 
 //Create function
@@ -247,6 +298,14 @@ async function list(req, res) {
     })
 }
 
+//Update reservation's status
+
+async function updateStatus(req, res) {
+  const reservation_id = res.locals.res.reservation_id;
+  const { status } = req.body.data;
+  res.json({ data: await service.updateStatus(reservation_id, status) });
+}
+
 module.exports = {
   create: [
     hasData,
@@ -256,7 +315,8 @@ module.exports = {
     hasMobileNumber,
     hasValidDate,
     hasValidTime,
-    hasPeople,
+    hasValidPartySize,
+    isBooked,
     asyncErrorBoundary(create),
   ],
   read: [
@@ -270,8 +330,14 @@ module.exports = {
     hasMobileNumber,
     hasValidDate,
     hasValidTime,
-    hasPeople,
+    hasValidPartySize,
     asyncErrorBoundary(update),
   ],
-  list: [asyncErrorBoundary(list)],
+  updateStatus: [
+    asyncErrorBoundary(reservationExists),
+    hasValidStatus,
+    hasValidFinish,
+    asyncErrorBoundary(updateStatus),
+  ],
+  list: [validPhoneNumber, asyncErrorBoundary(list)],
 };

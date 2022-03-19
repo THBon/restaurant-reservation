@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { createTable } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
-
+import "./table-new.css";
 
 export default function NewTable() {
     const [tableError, setTableError] = useState(null);
@@ -38,11 +38,11 @@ export default function NewTable() {
     };
 
     return (
-        <div>
-            <div>
+        <div className="new-table">
+            <div className="header">
                 <h1>New Table</h1>
             </div>
-            <form onSubmit = {submitHandler}>
+            <form className="table-form mt-3" onSubmit = {submitHandler}>
                 <ErrorAlert error = {tableError} />
                 <fieldset>
                     <legend>Table Information</legend>

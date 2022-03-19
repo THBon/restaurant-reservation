@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { updateStatus } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
-
+import "./reservation-list.css";
 export default function ListReservations({ reservations }) {
     const [cancelError, setCancelError] = useState(null);
 
@@ -43,7 +43,7 @@ export default function ListReservations({ reservations }) {
                     Status: {reservation.status}{' '}
                 </li>
                 <div className="list-group-item card-footer">
-                {(reservation.status === "Booked" && (
+                {(reservation.status === "booked" && (
                     <>
                         <a href={`/reservations/${reservation.reservation_id}/seat`}>
                             <button type="button" className="btn">
