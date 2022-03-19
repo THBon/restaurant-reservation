@@ -6,7 +6,7 @@ import ErrorAlert from "../layout/ErrorAlert";
 export default function SeatTable() {
     const [tables, setTables] = useState([]);
     const [tableError, setTableError] = useState(null);
-    const [selectValue, setSelectValue] = useState("");
+    const [selectValue, setSelectValue] = useState('');
 
     useEffect(loadTables, []);
 
@@ -27,7 +27,7 @@ export default function SeatTable() {
     const submitHandler = (event) => {
         event.preventDefault();
         updateTable(resId, Number(selectValue.table_id))
-            .then(() => history.pushState('/dashboard'))
+            .then(() => history.push('/dashboard'))
             .catch(setTableError);
     };
 

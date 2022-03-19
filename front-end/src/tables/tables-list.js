@@ -9,7 +9,7 @@ export default function TablesView({ tables, loadDashboard }) {
     async function finishHandler(tableId) {
         if (
             window.confirm(
-                "Is this table ready for new guest ?"
+                "Is this table ready to seat for new guest? This cannot be undone."
                 )
             ) {
             const abortController = new AbortController();

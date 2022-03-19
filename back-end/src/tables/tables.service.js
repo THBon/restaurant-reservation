@@ -10,7 +10,7 @@ function create(table) {
 function readTable(tableId) {
     return knex('tables')
         .select('*')
-        .where({ table_id })
+        .where({ table_id: tableId })
         .first();
 }
 
