@@ -53,7 +53,7 @@ function Dashboard({ date }) {
       <div className="dashboard-header">
         <h1>Dash Board</h1>
         <h3>Reservations for date: {date}</h3>
-        <div className="dashboard-button">
+        <div className="dashboard-buttons">
           <button className="btn mr-2" onClick={() => previousDateHandler(date)}>Previous</button>
           <button className="btn mr-2" onClick={() => todayHandler()}>Today</button>  
           <button className="btn mr-2" onClick={() => nextDateHandler(date)}>Next</button>

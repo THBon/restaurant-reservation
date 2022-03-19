@@ -3,8 +3,8 @@ html {
   min-height: 100vh;
   background-image: linear-gradient(
     to right top,
-    #58baf3,
-    rgb(147, 219, 241),
+    #23cca2,
+    rgb(122, 235, 197),
     white
   );
 }
