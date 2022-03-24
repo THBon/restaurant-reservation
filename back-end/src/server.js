@@ -10,7 +10,7 @@ knex.migrate
     app.listen(PORT, listener);
   })
   .catch((error) => {
-    console.error(error);
+    console.error(error); 
     knex.destroy();
   });
 
