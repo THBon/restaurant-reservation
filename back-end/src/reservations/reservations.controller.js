@@ -106,7 +106,6 @@ function hasMobileNumber(req, res, next) {
 function hasValidDate(req, res, next) {
   const { reservation_date, reservation_time } = req.body.data;
   const { mainTime } = req.body.date;
-
   const today = new Date();
   const submitDate = new Date(reservation_date + " " + reservation_time)
   const time = today.getTime();
