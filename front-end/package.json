@@ -5,13 +5,10 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Thinkful-Ed/starter-restaurant-reservation",
+    "url": "https://github.com/THBon/restaurant-reservation",
     "directory": "/front-end"
   },
   "private": true,
-  "engines": {
-    "node": "16"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
