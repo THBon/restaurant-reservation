@@ -32,7 +32,8 @@
   .search-form .btn:active,
   .search-form .btn:focus {
     color: #23cca2;
-    border-radius: 4px solid #23cca2;
+    border: 2px solid #23cca2;
+    /* border-radius: 4px solid #23cca2; */
     background-color: white;
   }
   

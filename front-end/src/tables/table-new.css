@@ -8,6 +8,11 @@
     padding: 0.5em 1.5em;
   }
   
+.btn:hover {
+  background-color: white;
+  color: #23cca2;
+}
+
   .new-table {
     background-color: white;
     width: 75%;
