@@ -31,15 +31,24 @@
   .finish-button {
     color: white;
     background-color: #245;
+    border: 2px solid #245;
     border-radius: 5px;
     margin: 0.25em;
     padding: 0.5em 1em;
     font-size: 0.875rem;
   }
   
-  .finish-button:hover {
+  /* .finish-button:hover {
     background-color: #ffffff;
     color: #245;
+  } */
+  .finish-button:hover,
+  .finish-button:active,
+  .finish-button:focus {
+    color: #245;
+    border: 2px solid #23cca2;
+    /* border-radius: 4px solid #23cca2; */
+    background-color: white;
   }
   
   @media only screen and (max-width: 850px) {

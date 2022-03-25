@@ -18,7 +18,8 @@ input {
     text-align: center;
     color: white;
     background-color: #245;
-    border-radius: 4px solid #245;
+    border: 2px solid #245;
+    /* border-radius: 4px solid #245; */
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-family: 'Trebuchet MS', sans-serif;
     margin-right: 1em;
@@ -28,8 +29,9 @@ input {
   .reservation-form .btn:hover,
   .reservation-form .btn:active,
   .reservation-form .btn:focus {
-    color: #23cca2;
-    border-radius: 4px solid #23cca2;
+    color: #245;
+    border: 2px solid #23cca2;
+    /* border-radius: 4px solid #23cca2; */
     background-color: white;
   }
   

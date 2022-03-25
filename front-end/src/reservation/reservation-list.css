@@ -24,6 +24,7 @@
   .list-group-item .btn {
     color: white;
     background-color: #245;
+    border: 2px solid #245;
     border-radius: 4px;
     margin: 0.25em;
     padding: 0.5em 1em;
@@ -38,8 +39,9 @@
   .list-group-item .btn:hover,
   .list-group-item .btn:active,
   .list-group-item .btn:focus {
-    color: #23cca2;
-    border-radius: 4px solid #23cca2;
+    color: #245;
+    border: 2px solid #23cca2;
+    /* border-radius: 4px solid #23cca2; */
     background-color: white;
   }
   

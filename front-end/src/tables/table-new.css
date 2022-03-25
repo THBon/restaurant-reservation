@@ -2,10 +2,19 @@
     text-align: center;
     color: white;
     background-color: #245;
+    border: 2px solid #245;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-family: 'Trebuchet MS', sans-serif;
     margin-right: 1em;
     padding: 0.5em 1.5em;
+  }
+  .table-form .btn:hover,
+  .table-form .btn:active,
+  .table-form .btn:focus {
+    color: #245;
+    border: 2px solid #23cca2;
+    /* border-radius: 4px solid #23cca2; */
+    background-color: white;
   }
   
 .btn:hover {
