@@ -3,8 +3,8 @@ select {
     padding: 0.75em 1.25em;
     margin: 0.5em 0em;
     box-sizing: border-box;
-    border: 1px solid #245;
-    border-radius: 4px;
+    border: 2px solid #245;
+    border-radius: 4px solid #245;
   }
   
   .seat-reservation {
@@ -22,6 +22,14 @@ select {
     font-family: 'Trebuchet MS', sans-serif;
     margin-right: 15px;
     padding: 0.5em 1.5em;
+  }
+
+  .select-container .btn:hover,
+  .select-container .btn:active,
+  .select-container .btn:focus {
+    color: #23cca2;
+    border-radius: 4px solid #23cca2;
+    background-color: white;
   }
   
   @media only screen and (max-width: 650px) {

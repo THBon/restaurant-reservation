@@ -24,15 +24,23 @@
   .list-group-item .btn {
     color: white;
     background-color: #245;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 0.25em;
     padding: 0.5em 1em;
     font-size: 0.875rem;
   }
   
-  .list-group-item .btn:hover {
+  /* .list-group-item .btn:hover {
     background-color: #1ef3cf;
     color: white;
+  } */
+
+  .list-group-item .btn:hover,
+  .list-group-item .btn:active,
+  .list-group-item .btn:focus {
+    color: #23cca2;
+    border-radius: 4px solid #23cca2;
+    background-color: white;
   }
   
   .card-footer {

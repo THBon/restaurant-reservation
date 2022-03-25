@@ -40,6 +40,14 @@ h1, h2 {
   color: #e5e5ec
 }
 
+.btn-dar:hover,
+.btn-dar:active,
+.btn-dar:focus {
+  color: #23cca2;
+  /* border-radius: 4px solid #23cca2; */
+  background-color: white;
+}
+
 @media only screen and (max-width: 1000px) {
   .frame {
     flex-direction: column;

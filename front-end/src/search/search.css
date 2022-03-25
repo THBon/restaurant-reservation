@@ -1,5 +1,5 @@
 .search-form input {
-    border: 1px solid #08b2e3;
+    border: 2px solid #23cca2;
     border-radius: 4px;
   }
   
@@ -26,6 +26,14 @@
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-family: 'Trebuchet MS', sans-serif;
     padding: 0.5em 1.5em;
+  }
+
+  .search-form .btn:hover,
+  .search-form .btn:active,
+  .search-form .btn:focus {
+    color: #23cca2;
+    border-radius: 4px solid #23cca2;
+    background-color: white;
   }
   
   .match-header {
