@@ -21,13 +21,16 @@
   .search-form .btn {
     text-align: center;
     color: white;
-    background-color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: black; */
+    background-color: #245;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     padding: 0.5em 1.5em;
   }
   
   .match-header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.875rem;
     margin-bottom: 0em;
     padding: 0.5em;

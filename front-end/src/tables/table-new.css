@@ -1,8 +1,9 @@
 .table-form .btn {
     text-align: center;
     color: white;
-    background-color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #245;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     margin-right: 1em;
     padding: 0.5em 1.5em;
   }

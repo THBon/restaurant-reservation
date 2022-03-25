@@ -2,14 +2,20 @@
     margin: 0 auto;
     width: 75%;
   }
+
+  strong {
+    color: #23cca2;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
   
   .dashboard-header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     width: 100%;
-    background-color: black;
+    background-color: #245;
     color: white;
     margin: 2em auto;
     padding: 1.5em;
@@ -22,7 +28,7 @@
   
   .dashboard-header .btn {
     font-size: 1rem;
-    color: black;
+    color: #245;
     background-color: white;
     transition-duration: 0.3s;
     padding: 0.5em 1.25em;
@@ -31,7 +37,7 @@
   .dashboard-header .btn:hover {
     background-color: #16f5ab;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #245;
   }
   
   @media only screen and (max-width: 850px) {

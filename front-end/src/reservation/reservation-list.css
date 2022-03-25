@@ -2,16 +2,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1em;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     margin: 2em auto;
     text-align: center;
   }
   
   .card-header {
     color: white;
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #000000;
+    background-color: #245;
     text-shadow: 0 1px 0 rgb(0 0 0 / 20%);
   }
   
@@ -21,7 +23,7 @@
   
   .list-group-item .btn {
     color: white;
-    background-color: black;
+    background-color: #245;
     border-radius: 5px;
     margin: 0.25em;
     padding: 0.5em 1em;

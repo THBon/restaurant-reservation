@@ -19,7 +19,7 @@ body {
 .side-bar {
   /* background-color: #1B1B1E; */
   background-color: #245;
-  min-width: 230px;
+  min-width: 235px;
 }
 
 /*Head*/
@@ -36,7 +36,7 @@ h1, h2 {
 }
 
 .btn-dark {
-  background-color: #323238;
+  background-color: #245;
   color: #e5e5ec
 }
 

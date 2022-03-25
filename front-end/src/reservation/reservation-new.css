@@ -3,7 +3,7 @@ input {
     padding: 0.75em 1.25em;
     margin: 0.5em 0em;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #245;
     border-radius: 4px;
   }
   
@@ -17,8 +17,9 @@ input {
   .reservation-form .btn {
     text-align: center;
     color: white;
-    background-color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #245;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     margin-right: 1em;
     padding: 0.5em 1.5em;
   }
