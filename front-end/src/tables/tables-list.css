@@ -21,7 +21,8 @@
   }
   
   .tables-header h3 {
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 2.5rem;
     margin: 0em;
   }
