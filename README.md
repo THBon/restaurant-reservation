@@ -2,7 +2,7 @@
 
 https://bon-restaurant-client.herokuapp.com/dashboard
 
-This project create a reservation system for restaurant. The website is capable of creating, editing, cancelling, and searching reservations. There is a simple list of tables that allowed consumers or hosts to pair their reservation with an existing free table. When customers finish the table, there will be an option to clear the table to be ready for the next guest. The search function take in the phone number and display the reservations containing that phone number.
+This project creates a reservation system for restaurants. The website is capable of creating, editing, cancelling, and searching reservations. There is a simple list of tables that allowed consumers or hosts to pair their reservations with an existing free table. When customers finish the table, there will be an option to clear the table to be ready for the next guest. The search function takes in the phone number and displays the reservations containing that phone number.
 
 ## Technologies and tools
 * Javascript
